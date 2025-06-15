@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>二戰著名戰艦</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-blue-800 text-white p-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">二戰著名戰艦</h1>
+      <nav class="space-x-4">
+        <button onclick="showPage('home')" class="hover:underline">首頁</button>
+        <button onclick="showPage('list')" class="hover:underline">戰艦列表</button>
+        <button onclick="showPage('about')" class="hover:underline">關於本站</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-4">
+    <!-- 首頁 -->
+    <section id="home" class="page">
+      <h2 class="text-2xl font-semibold mb-4">歡迎來到二戰戰艦介紹網</h2>
+      <p class="mb-4">這裡介紹了幾艘在二次世界大戰中極具代表性的戰艦，包括美軍、德軍與日軍的海上力量。</p>
+      <img src="https://farm66.static.flickr.com/65535/52990948189_c7367bb7ea_b.jpg" alt="二戰戰艦" class="rounded shadow-md w-full max-w-xl">
+    </section>
+
+    <!-- 戰艦列表 -->
+    <section id="list" class="page hidden">
+      <h2 class="text-2xl font-semibold mb-4">戰艦列表</h2>
+      <ul class="space-y-4">
+        <li class="bg-white p-4 rounded shadow">
+          <h3 class="text-lg font-bold mb-2">🇺🇸 USS Iowa（愛荷華號）</h3>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/BB61_USS_Iowa_BB61_broadside_USN.jpg/960px-BB61_USS_Iowa_BB61_broadside_USN.jpg" alt="USS Iowa" class="rounded mb-2">
+          <p>美國海軍的愛荷華級戰艦，以高速與重火力著稱，是現在少數幾台保存下來的戰列艦，2012年7月4日，愛荷華號戰艦於洛杉磯正式成為愛荷華號戰艦浮動博物館，並於7月7日正式對公眾開放。</p>
+        </li>
+        <li class="bg-white p-4 rounded shadow">
+          <h3 class="text-lg font-bold mb-2">🇯🇵 Yamato（大和號）</h3>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Japanese_battleship_Yamato_running_trials_off_Bungo_Strait%2C_20_October_1941.jpg" alt="Yamato" class="rounded mb-2">
+          <p>日本帝國海軍的驕傲，是世界上建造過最大、火力最強的戰艦之一，1945年（昭和20年）4月7日，大和號在天一號作戰期間，遭受美軍特遣艦隊大量艦載機的猛烈飽和攻擊，於坊之岬海戰中被美軍飛機擊沉。。</p>
+        </li>
+        <li class="bg-white p-4 rounded shadow">
+          <h3 class="text-lg font-bold mb-2">🇩🇪 Bismarck（俾斯麥號）</h3>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Bundesarchiv_Bild_193-04-1-26%2C_Schlachtschiff_Bismarck.jpg/960px-Bundesarchiv_Bild_193-04-1-26%2C_Schlachtschiff_Bismarck.jpg" alt="Bismarck" class="rounded mb-2">
+          <p>納粹德國的主力戰艦，俾斯麥號及其姊妹艦鐵必制號是德國有史以來建造的最大型戰艦，也是歐洲列強曾建造的兩款最大型戰艦之一。以擊沉英國的胡德號聞名，1941年5月27日因戰鬥損傷失效後，自沉於北大西洋。</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 關於本站 -->
+    <section id="about" class="page hidden">
+      <h2 class="text-2xl font-semibold mb-4">關於本站</h2>
+      <p>本網站由喜歡二戰戰艦的人製作，資料取自維基百科，經過部分簡化。</p>
+    </section>
+  </main>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
